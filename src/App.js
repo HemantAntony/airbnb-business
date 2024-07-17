@@ -8,13 +8,7 @@ function App() {
     return (
       <Card
         key={cardInfo.id}
-        img={cardInfo.coverImg}
-        rating={cardInfo.stats.rating}
-        reviewCount={cardInfo.stats.reviewCount}
-        location={cardInfo.location}
-        title={cardInfo.title}
-        price={cardInfo.price}
-        openSpots={cardInfo.openSpots}
+        {...cardInfo}
       />
     )
   })
