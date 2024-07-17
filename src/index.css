@@ -80,7 +80,6 @@ section {
 
 .card--stats {
   display: flex;
-  align-items: center;
 }
 
 .card--star {
