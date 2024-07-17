@@ -1,20 +1,19 @@
 import React from "react"
-import cardImage from "../images/katie-zaferes.png"
+// import cardImage from "../images"
 import star from "../images/star.png"
 
-export default function Card() {
+export default function Card({img, rating, reviewCount, location, title, price}) {
     return (
         <div className="card">
-            <h4>SOLD OUT</h4>
-            <img src={cardImage} alt="card" className="card--image" />
+            <img src={`./images/${img}`} alt="card" className="card--image" />
             <div className="card--stats">
                 <img className="card--star" src={star} alt="star"/>
-                <span>5.0</span>
-                <span className="gray">(6) • </span>
-                <span className="gray">USA</span>
+                <span>{rating}</span>
+                <span className="gray">({reviewCount}) • </span>
+                <span className="gray">{location}</span>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136</span> / person</p>
+            <p>{title}</p>
+            <p><span className="bold">From ${price}</span> / person</p>
         </div>
     )
 }
